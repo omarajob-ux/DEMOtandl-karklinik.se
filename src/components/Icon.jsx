@@ -1,0 +1,61 @@
+import {
+  ShieldCheck,
+  Certificate,
+  Sparkle,
+  HeartStraight,
+  Users,
+  MagnifyingGlass,
+  FirstAid,
+  Wrench,
+  Syringe,
+  Tooth,
+  Drop,
+  Smiley,
+  Star,
+  Phone,
+  EnvelopeSimple,
+  MapPin,
+  Clock,
+  CalendarCheck,
+  CaretDown,
+  List,
+  X,
+  CheckCircle,
+  Quotes,
+  WarningCircle,
+  SpinnerGap,
+} from "@phosphor-icons/react";
+
+const registry = {
+  ShieldCheck,
+  Certificate,
+  Sparkle,
+  HeartStraight,
+  Users,
+  MagnifyingGlass,
+  FirstAid,
+  Wrench,
+  Syringe,
+  Tooth,
+  Drop,
+  Smiley,
+  Star,
+  Phone,
+  EnvelopeSimple,
+  MapPin,
+  Clock,
+  CalendarCheck,
+  CaretDown,
+  List,
+  X,
+  CheckCircle,
+  Quotes,
+  WarningCircle,
+  SpinnerGap,
+};
+
+export default function Icon({ name, size = 24, weight = "regular", className, ...rest }) {
+  const Cmp = registry[name];
+  if (!Cmp) return null;
+  return <Cmp size={size} weight={weight} className={className} aria-hidden="true" {...rest} />;
+}
